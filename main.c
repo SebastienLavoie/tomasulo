@@ -30,6 +30,7 @@
 #include "instruction.h"
 #include "station.h"
 #include "tomasulo.h"
+#include "configuration.h"
 
 
 void print_banner();
@@ -51,7 +52,7 @@ int main(void) {
     if (!program) {
         puts("list creation failed");
     }
-    load_program("prog1.txt", program);
+    load_program(PROGRAMME_FILE_PATH, program);
 
     // create reservation stations
     struct slist* stations = create_station_list(10);
@@ -87,7 +88,7 @@ int main(void) {
             case 'a':
                 return 0;
         }
-        system("clear");    // UNIX
+        //system("clear");    // UNIX
         //system("cls");    // DOS
     }
 }

@@ -1,0 +1,18 @@
+//
+// Created by QUETZAL on 2020-07-21.
+//
+
+#ifndef TOMASULO_CONFIGURATION_H
+#define TOMASULO_CONFIGURATION_H
+
+#define PROGRAMME_FILE_PATH "../prog1.txt"
+
+#define LD_EXEC_CYCLES 1
+#define SW_EXEC_CYCLES 1
+#define ADDD_EXEC_CYCLES 2
+#define SUBD_EXEC_CYCLES 2
+#define MULD_EXEC_CYCLES 4
+#define DIVD_EXEC_CYCLES 8
+
+
+#endif //TOMASULO_CONFIGURATION_H

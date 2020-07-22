@@ -23,6 +23,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "instruction.h"
+#include "configuration.h"
 
 static void _grow(struct ilist* list);
 static int _decode(struct ilist* list, int pos, char* text);
@@ -38,7 +39,12 @@ const char* mnemonics[] = {"ld", "sw", "addd", "subd", "muld", "divd"};
 
 // array of ints for execution time
 // also ordered the same as enum opcode
-const int exec_cycles[] = { 1,    1,    2    ,  2    ,  4     ,  8};
+const int exec_cycles[] = { LD_EXEC_CYCLES,
+                            SW_EXEC_CYCLES,
+                            ADDD_EXEC_CYCLES,
+                            SUBD_EXEC_CYCLES,
+                            MULD_EXEC_CYCLES,
+                            DIVD_EXEC_CYCLES};
 
 
 void inst_details(struct instruction* inst) {
